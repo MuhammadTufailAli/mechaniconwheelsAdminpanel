@@ -1,0 +1,107 @@
+.NavBar {
+  background-color: blueviolet;
+  margin: 10px;
+  height: 80px;
+  display: flex;
+}
+.NavBarText {
+  color: white;
+  align-self: center;
+  margin-left: 30px;
+}
+.UnderNavBarDiv {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 100px;
+  margin-bottom: -20px;
+  margin-top: 20px;
+}
+.UnderNavBarDivText {
+  font-weight: bold;
+}
+.DivOfList {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 100px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  border-bottom: 0.5px solid rgb(208, 208, 208);
+}
+.DivOfListContent {
+  align-self: center;
+}
+.DivOfListContentText {
+  font-weight: bold;
+  margin-left: 10px;
+}
+.DivOfListContentRole {
+  align-self: center;
+}
+.DivOfListContentView {
+  align-self: center;
+  margin-right: -70px;
+}
+.UsersPhoto {
+  height: auto;
+  max-height: 50px;
+  width: 50px;
+  max-width: 50px;
+  border-radius: 50%;
+}
+
+.DropDown3Dot {
+  z-index: 2;
+  border: 1px solid rgba(0, 0, 0, 0.04);
+  box-shadow: 0 16px 24px 2px rgba(0, 0, 0, 0.14);
+  background-color: white;
+  margin-top: -10px;
+}
+.DropDown3Dot ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.DropDown3Dot li {
+  padding: 8px 12px;
+}
+
+.Modal {
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  width: 400px;
+  height: 300px;
+  background-color: grey;
+  padding: 20px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.ReactModal__Overlay {
+  opacity: 0;
+
+  transition: all 500ms ease-in-out;
+}
+
+.ReactModal__Overlay--after-open {
+  opacity: 1;
+}
+
+.ReactModal__Overlay--before-close {
+  opacity: 0;
+}
+
+.ModelDiv {
+}
+
+.DropDown3Dot li:hover {
+  background-color: rgba(0, 0, 0, 0.14);
+  cursor: pointer;
+}
+
+.DropDownLink3Dot {
+  text-decoration: none;
+  color: black;
+}

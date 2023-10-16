@@ -1,0 +1,106 @@
+.topContainerUser {
+  background-color: rgba(235, 238, 242, 255);
+}
+.ProfileInfoUser {
+  display: inline-block;
+  width: 40%;
+  margin-left: 30%;
+  background-color: white;
+  margin-top: 20px;
+  border-radius: 12px;
+  margin-bottom: 5px;
+}
+.imageDivUser {
+  text-align: center;
+  margin-top: 10px;
+}
+.UserProfilePhotoUser {
+  height: 90px;
+  max-height: 90px;
+  width: 90px;
+  max-width: 90px;
+  border-radius: 50%;
+  border: 3px solid purple;
+}
+.InformationUser {
+  margin-top: 10px;
+  width: 70%;
+  margin-left: 20%;
+}
+
+.TotalProductsUser {
+  display: inline-block;
+  width: 40%;
+  margin-left: 30%;
+  background-color: white;
+  margin-top: 20px;
+  border-radius: 12px;
+  margin-bottom: 5px;
+}
+.TotalProductsParent {
+  display: flex;
+  flex-direction: row;
+
+  width: 90%;
+  margin-left: 5%;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+.ProductDesignUser {
+  border: 1px solid rgb(181, 181, 181);
+  margin: 20px;
+  width: 280px;
+}
+.ProductDesignUserNotification {
+  border: 1px solid rgb(181, 181, 181);
+  margin: 20px;
+  width: 280px;
+}
+
+.ProductPhotoUser {
+  width: 280px;
+  height: 250px;
+}
+
+.boxForInfoUser {
+  margin-left: 30px;
+  margin-right: 30px;
+  margin-bottom: 20px;
+  border-radius: 15px;
+}
+.boxForInfoUpperContainerUser {
+  background-color: rgba(246, 247, 249, 255);
+
+  border-radius: 15px;
+
+  height: 110px;
+  display: flex;
+}
+.boxForInfoUpperIcon {
+  align-self: center;
+  margin-right: 20px;
+}
+
+.boxNumberUser {
+  font-size: 30px;
+  font-weight: bold;
+  color: #334155;
+  margin-left: 20px;
+  padding-top: 20px;
+  margin-bottom: 0px;
+}
+.boxUpperTextUser {
+  color: #979ea4;
+  margin-left: 20px;
+}
+
+.TotalNotifications {
+  display: inline-block;
+  width: 40%;
+  margin-left: 30%;
+  background-color: white;
+  margin-top: 20px;
+  border-radius: 12px;
+  margin-bottom: 5px;
+}

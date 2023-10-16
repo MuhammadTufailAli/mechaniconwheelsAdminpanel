@@ -1,0 +1,144 @@
+.LayoutTopConyainer {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.SidebarheaderOpen {
+  text-align: end;
+  margin-top: 10px;
+}
+.SidebarheaderClosed {
+  text-align: center;
+  margin-top: 10px;
+}
+.headerOpen {
+  padding: 10px;
+  border-radius: 10px;
+  text-align: center;
+}
+.headerOpen:hover {
+  padding: 10px;
+  background-color: #8b008b;
+  border-radius: 10px;
+  text-align: center;
+  color: white;
+}
+.headerClosed {
+  padding: 10px;
+  border-radius: 10px;
+  text-align: center;
+}
+.headerClosed:hover {
+  padding: 10px;
+  background-color: #8b008b;
+  border-radius: 10px;
+  text-align: center;
+  color: white;
+}
+
+.link {
+  display: flex;
+  margin-bottom: 5px;
+
+  color: rgb(52, 52, 52);
+  text-decoration: none;
+}
+.link:hover {
+  border-right: 4px solid white;
+  background: purple;
+  transition: 0.2s cubic-bezier(0.6, -0.28, 0.735, 0.045);
+  color: white;
+  text-decoration: none;
+}
+.active {
+  border-right: 4px solid white;
+  background: purple;
+  color: white;
+  text-decoration: none;
+}
+.link_text {
+  white-space: nowrap;
+  font-size: 15px;
+}
+.Navbar {
+  height: 60px;
+  background-color: #8b008b;
+}
+.Navbar-Elements {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  height: 60px;
+  margin-right: 10px;
+}
+.MessengerDiv {
+  padding: 10px;
+  margin-right: 10px;
+}
+.MessengerDiv:hover {
+  background-color: #d911d9;
+
+  border-radius: 3px;
+}
+.Messenger {
+  color: white;
+  font-size: 22px;
+}
+.NotificationDiv {
+  margin-right: 10px;
+  padding: 10px;
+}
+.NotificationDiv:hover {
+  background-color: #d911d9;
+
+  border-radius: 3px;
+}
+.Notification {
+  color: white;
+  font-size: 24px;
+}
+.ProfileDiv {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  height: 60px;
+}
+.ProfileDiv:hover {
+  padding: 10px;
+  background-color: #d911d9;
+}
+.adminPhoto {
+  height: auto;
+  max-height: 26px;
+  width: auto;
+  max-width: 26px;
+  border-radius: 50%;
+  margin-top: 10px;
+}
+.DropDown {
+  z-index: 2;
+  border: 1px solid rgba(0, 0, 0, 0.04);
+  box-shadow: 0 16px 24px 2px rgba(0, 0, 0, 0.14);
+  background-color: white;
+  margin-top: -10px;
+}
+.DropDown ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.DropDown li {
+  padding: 8px 12px;
+}
+
+.DropDown li:hover {
+  background-color: rgba(0, 0, 0, 0.14);
+  cursor: pointer;
+}
+
+.DropDownLink {
+  text-decoration: none;
+  color: black;
+}

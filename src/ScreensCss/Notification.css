@@ -1,0 +1,7 @@
+.cnicPhoto {
+  height: 90;
+  max-height: 90px;
+  width: 90px;
+  max-width: 90px;
+  border-radius: 10px;
+}

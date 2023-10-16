@@ -1,0 +1,83 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.topContainer {
+  background-color: rgba(235, 238, 242, 255);
+  display: inline-block;
+  width: 100%;
+}
+.ProfileInfo2 {
+  display: inline-block;
+  width: 30%;
+  margin-left: 40%;
+  background-color: white;
+
+  border-radius: 12px;
+  margin-bottom: 20px;
+}
+.Information {
+  margin-top: 20px;
+  width: 60%;
+  margin-left: 20%;
+}
+.imageDiv {
+  text-align: center;
+  margin-top: 30px;
+}
+.UserProfilePhoto {
+  height: 340px;
+  max-height: 340px;
+  width: 380px;
+  max-width: 380px;
+  border-radius: 10px;
+  border: 3px solid purple;
+}
+.carousel {
+  padding: 10px 10px 0;
+  border-radius: 4px;
+  width: 375px;
+  margin: auto;
+}
+.carousel__main {
+  border-radius: 4px;
+  height: 110px;
+}
+
+.demo-item {
+  height: 110px;
+}
+
+.UnderHeaderTextAllUsers {
+  font-size: 26px;
+  font-weight: 600;
+  margin-left: 18px;
+
+  margin-top: 20px;
+  margin-bottom: 0px;
+}
+
+.TotalReviewParent {
+  display: flex;
+  flex-direction: row;
+
+  width: 90%;
+  margin-left: 5%;
+  flex-wrap: wrap;
+}
+.UserReviewPhotoUser {
+  height: 60px;
+  max-height: 60px;
+  width: 60px;
+  max-width: 60px;
+  border-radius: 50%;
+  border: 3px solid purple;
+}
+.reviewDiv {
+  border: 0.6px solid rgb(209, 208, 208);
+  margin: 10px;
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+}

@@ -1,0 +1,30 @@
+/* .Navbar-Elements {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 100%;
+  justify-content: flex-end;
+}
+.MessengerDiv {
+  padding: 5px;
+}
+.MessengerDiv:hover {
+  background-color: grey;
+  border-radius: 3px;
+}
+.Messenger {
+  color: white;
+  font-size: 22px;
+}
+.NotificationDiv {
+  margin-right: 10px;
+  padding: 5px;
+}
+.NotificationDiv:hover {
+  background-color: grey;
+  border-radius: 3px;
+}
+.Notification {
+  color: white;
+  font-size: 24px;
+} */

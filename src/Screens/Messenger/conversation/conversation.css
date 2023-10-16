@@ -1,0 +1,31 @@
+.conversationContainer {
+  margin: 15px;
+
+  padding: 10px;
+  width: 60%;
+}
+.usernameNPhoto {
+  display: flex;
+  flex-direction: row;
+}
+.conversationContainer:hover {
+  background-color: rgba(0, 0, 0, 0.14);
+  cursor: pointer;
+}
+.FriendPhoto {
+  width: 50px;
+  max-width: 50px;
+  height: 50px;
+  max-height: 50px;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+.ReceivedMessage {
+  margin-left: 63px;
+  margin-top: -15px;
+  color: rgb(167, 167, 167);
+  width: 120px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
