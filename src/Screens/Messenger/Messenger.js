@@ -37,13 +37,13 @@ function Messenger() {
     try {
       const result = await axios.get(`${port.herokuPort}/users/allUsers`, {
         headers: {
-          Authorization: `Bearer ${cookies.jwt.token}`,
+          Authorization: `Bearer ${cookies?.jwt?.token}`,
         },
       });
 
       setAllusers(
         result.data.data.doc.filter(
-          (item) => item.email !== cookies.jwt.data.user.email
+          (item) => item.email !== cookies?.jwt?.data?.user?.email
         )
       );
       setdataToshow([]);
@@ -62,10 +62,10 @@ function Messenger() {
   const findConversation = async (otherUser) => {
     try {
       const result = await axios.get(
-        `${port.herokuPort}/conversation/find/${cookies.jwt.data.user._id}/${otherUser}`,
+        `${port.herokuPort}/conversation/find/${cookies?.jwt?.data?.user?._id}/${otherUser}`,
         {
           headers: {
-            Authorization: `Bearer ${cookies.jwt.token}`,
+            Authorization: `Bearer ${cookies?.jwt?.token}`,
           },
         }
       );
@@ -75,7 +75,7 @@ function Messenger() {
         // navigation.navigate("ChatScreen", { currentChat: result.data.data });
       } else {
         const userDetails = {
-          senderId: cookies.jwt.data.user._id,
+          senderId: cookies?.jwt?.data?.user?._id,
           receiverId: otherUser,
         };
         try {
@@ -84,7 +84,7 @@ function Messenger() {
             userDetails,
             {
               headers: {
-                Authorization: `Bearer ${cookies.jwt.token}`,
+                Authorization: `Bearer ${cookies?.jwt?.token}`,
               },
             }
           );
@@ -108,7 +108,7 @@ function Messenger() {
     axios
       .get(`${port.herokuPort}/conversation`, {
         headers: {
-          Authorization: `Bearer ${cookies.jwt.token}`,
+          Authorization: `Bearer ${cookies?.jwt?.token}`,
         },
       })
       .then((res) => {
@@ -135,7 +135,7 @@ function Messenger() {
     axios
       .get(`${port.herokuPort}/message/${currentChat?._id}`, {
         headers: {
-          Authorization: `Bearer ${cookies.jwt.token}`,
+          Authorization: `Bearer ${cookies?.jwt?.token}`,
         },
       })
       .then((res) => {
@@ -148,7 +148,7 @@ function Messenger() {
     axios
       .get(`${port.herokuPort}/users/singleUser/${otherUserId}`, {
         headers: {
-          Authorization: `Bearer ${cookies.jwt.token}`,
+          Authorization: `Bearer ${cookies?.jwt?.token}`,
         },
       })
       .then((res) => {
@@ -223,8 +223,7 @@ function Messenger() {
         <div>
           <div
             className="TopContainer"
-            style={{ display: "flex", overflow: "hidden" }}
-          >
+            style={{ display: "flex", overflow: "hidden" }}>
             <div className="ChatScreen">
               <div className="ChatMenu">
                 <div className="ChatMenuWrapper">
@@ -261,8 +260,7 @@ function Messenger() {
                           className="DropDownMessenger"
                           onClick={() => {
                             findConversation(item._id);
-                          }}
-                        >
+                          }}>
                           <ul>
                             <img
                               className="OtherUserPhoto"
@@ -295,8 +293,7 @@ function Messenger() {
                           //Or hum us conversation id ko use karta hova sari chat hasil kar la ga
                           onClick={() => {
                             setcurrentChat(c);
-                          }}
-                        >
+                          }}>
                           <Conversation
                             conversation={c}
                             currentUser={currentUser}
@@ -354,7 +351,7 @@ function Messenger() {
                           axios
                             .post(`${port.herokuPort}/message`, message, {
                               headers: {
-                                Authorization: `Bearer ${cookies.jwt.token}`,
+                                Authorization: `Bearer ${cookies?.jwt?.token}`,
                               },
                             })
                             .then((res) => {
@@ -365,8 +362,7 @@ function Messenger() {
                             .catch((err) => {
                               console.log(err);
                             });
-                        }}
-                      >
+                        }}>
                         <Form>
                           <Field
                             className="InputMessageContainer"

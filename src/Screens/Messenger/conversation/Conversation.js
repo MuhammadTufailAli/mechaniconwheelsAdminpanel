@@ -12,7 +12,7 @@ function Conversation({ conversation, currentUser, lastMessage }) {
     axios
       .get(`${port.herokuPort}/users/singleUser/${friendId}`, {
         headers: {
-          Authorization: `Bearer ${cookies.jwt.token}`,
+          Authorization: `Bearer ${cookies?.jwt?.token}`,
         },
       })
       .then((res) => {

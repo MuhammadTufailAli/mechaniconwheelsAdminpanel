@@ -56,8 +56,6 @@ const routes = [
 export default function LeftDrawer(props) {
   const theme = useTheme();
   const { cookies, setCookie, userdetails } = useContext(CartProvider);
-  console.log("Cookies cotain this data");
-  console.log(cookies.jwt.data.user);
 
   const [open, setOpen] = React.useState(false);
   const [profileMenuOpen, setProfileMenuOpen] = React.useState(false);
@@ -98,15 +96,13 @@ export default function LeftDrawer(props) {
           height: "100%",
           backgroundColor: "white",
           transitionDuration: "500ms",
-        }}
-      >
+        }}>
         <div className={open ? "SidebarheaderOpen" : "SidebarheaderClosed"}>
           <span
             className={open ? "headerOpen" : "headerClosed"}
             onClick={() => {
               handleDrawerClose();
-            }}
-          >
+            }}>
             {open ? (
               <AiOutlineCaretLeft size={25} />
             ) : (
@@ -122,16 +118,14 @@ export default function LeftDrawer(props) {
                 to={route.path}
                 key={index}
                 className="link"
-                activeClassName="active"
-              >
+                activeClassName="active">
                 <ListItem disablePadding sx={{ display: "block" }}>
                   <ListItemButton
                     sx={{
                       minHeight: 48,
                       justifyContent: open ? "initial" : "center",
                       px: 2.5,
-                    }}
-                  >
+                    }}>
                     <div style={{ alignSelf: "center", marginRight: 7 }}>
                       {route.icon}
                     </div>
@@ -154,8 +148,7 @@ export default function LeftDrawer(props) {
           left: open ? "15%" : "5%",
 
           transitionDuration: "500ms",
-        }}
-      >
+        }}>
         <div className="Navbar">
           <div className="Navbar-Elements">
             <div className="NotificationDiv">
@@ -173,12 +166,11 @@ export default function LeftDrawer(props) {
               className="ProfileDiv"
               onClick={() => {
                 setProfileMenuOpen(!profileMenuOpen);
-              }}
-            >
+              }}>
               <div style={{ display: "flex", flexDirection: "row" }}>
                 <img
                   className="adminPhoto"
-                  src={cookies.jwt.data.user.photoUrl}
+                  src={cookies?.jwt?.data?.user?.photoUrl}
                   alt="No photo"
                 />
                 <div>
@@ -187,15 +179,17 @@ export default function LeftDrawer(props) {
                       marginLeft: 10,
                       fontWeight: "bold",
                       color: "white",
-                    }}
-                  >
-                    {cookies.jwt.data.user.firstname}{" "}
-                    {cookies.jwt.data.user.lastname}
+                    }}>
+                    {cookies?.jwt?.data?.user?.firstname}{" "}
+                    {cookies?.jwt?.data?.user?.lastname}
                   </p>
                   <p
-                    style={{ marginTop: -20, marginLeft: 10, color: "	#F5F5F5" }}
-                  >
-                    {cookies.jwt.data.user.email}
+                    style={{
+                      marginTop: -20,
+                      marginLeft: 10,
+                      color: "	#F5F5F5",
+                    }}>
+                    {cookies?.jwt?.data?.user?.email}
                   </p>
                 </div>
               </div>

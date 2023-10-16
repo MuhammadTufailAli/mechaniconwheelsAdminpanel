@@ -27,7 +27,7 @@ function NotificationScreen() {
 
         {
           headers: {
-            Authorization: `Bearer ${cookies.jwt.token}`,
+            Authorization: `Bearer ${cookies?.jwt?.token}`,
           },
         }
       )
@@ -62,7 +62,7 @@ function NotificationScreen() {
         },
         {
           headers: {
-            Authorization: `Bearer ${cookies.jwt.token}`,
+            Authorization: `Bearer ${cookies?.jwt?.token}`,
           },
         }
       )
@@ -78,7 +78,7 @@ function NotificationScreen() {
         `${port.herokuPort}/adminNotification/deleteNotification/${notificationId}`,
         {
           headers: {
-            Authorization: `Bearer ${cookies.jwt.token}`,
+            Authorization: `Bearer ${cookies?.jwt?.token}`,
           },
         }
       )
@@ -128,8 +128,7 @@ function NotificationScreen() {
             style={{ marginRight: "8px" }}
             onClick={() => {
               updateUser("active", record.user.refOfUser._id, record.user._id);
-            }}
-          >
+            }}>
             Accept
           </Button>
 
@@ -142,8 +141,7 @@ function NotificationScreen() {
                 record.user.refOfUser._id,
                 record.user._id
               );
-            }}
-          >
+            }}>
             Reject
           </Button>
         </Space>
@@ -203,8 +201,7 @@ function NotificationScreen() {
           style={{
             display: "flex",
             backgroundColor: "rgba(235, 238, 242, 255)",
-          }}
-        >
+          }}>
           <div style={{ width: "80%", marginLeft: "10%" }}>
             <div>
               <p className="UnderHeaderTextAllUsers">Admin Notifications</p>
@@ -215,8 +212,7 @@ function NotificationScreen() {
 
                 justifyContent: "flex-end",
                 marginBottom: 10,
-              }}
-            >
+              }}>
               <div style={{ width: 200 }}>
                 <TextField
                   id="outlined-basic"

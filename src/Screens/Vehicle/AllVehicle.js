@@ -72,8 +72,7 @@ function AllVehicle() {
               to="/AllVehicle/SelectedVehicleDetails"
               state={{ product: record.user }}
               className="boxLowerTextLink"
-              style={{ color: "white" }}
-            >
+              style={{ color: "white" }}>
               View
             </Link>
           </Button>
@@ -108,8 +107,7 @@ function AllVehicle() {
                     console.log(err.response.data.message);
                   });
               }
-            }}
-          >
+            }}>
             Delete
           </Button>
         </Space>
@@ -218,12 +216,10 @@ function AllVehicle() {
             width: "100%",
             display: "flex",
             backgroundColor: "rgba(235, 238, 242, 255)",
-          }}
-        >
+          }}>
           <div
             className="RightSide"
-            style={{ width: "80%", marginLeft: "10%" }}
-          >
+            style={{ width: "80%", marginLeft: "10%" }}>
             <div>
               <p className="UnderHeaderText">Total Vehicle</p>
             </div>
@@ -233,8 +229,7 @@ function AllVehicle() {
 
                 justifyContent: "flex-end",
                 marginBottom: 10,
-              }}
-            >
+              }}>
               <div style={{ width: 220 }}>
                 <TextField
                   id="outlined-basic"
@@ -377,7 +372,7 @@ function AllVehicle() {
                                 `${port.herokuPort}/product/deleteProduct/${data._id}`,
                                 {
                                   headers: {
-                                    Authorization: `Bearer ${cookies.jwt.token}`,
+                                    Authorization: `Bearer ${cookies?.jwt?.token}`,
                                   },
                                 }
                               )

@@ -12,7 +12,7 @@ function SingleNotification({ userId, notificationId }) {
     axios
       .get(`${port.herokuPort}/users/singleUser/${userId}`, {
         headers: {
-          Authorization: `Bearer ${cookies.jwt.token}`,
+          Authorization: `Bearer ${cookies?.jwt?.token}`,
         },
       })
       .then((res) => {
@@ -33,7 +33,7 @@ function SingleNotification({ userId, notificationId }) {
         },
         {
           headers: {
-            Authorization: `Bearer ${cookies.jwt.token}`,
+            Authorization: `Bearer ${cookies?.jwt?.token}`,
           },
         }
       )
@@ -49,7 +49,7 @@ function SingleNotification({ userId, notificationId }) {
         `${port.herokuPort}/adminNotification/deleteNotification/${notificationId}`,
         {
           headers: {
-            Authorization: `Bearer ${cookies.jwt.token}`,
+            Authorization: `Bearer ${cookies?.jwt?.token}`,
           },
         }
       )
@@ -83,16 +83,14 @@ function SingleNotification({ userId, notificationId }) {
           style={{ color: "green" }}
           onClick={() => {
             updateUser("active");
-          }}
-        >
+          }}>
           <AiOutlineCheck />
         </span>
         <span
           style={{ color: "red" }}
           onClick={() => {
             updateUser("inactive");
-          }}
-        >
+          }}>
           <AiOutlineClose />
         </span>
       </div>

@@ -14,7 +14,7 @@ function ChatOnline({ onlineUsers, curentId, setcurrentChat }) {
     axios
       .get(`${port.herokuPort}/users/allUsers`, {
         headers: {
-          Authorization: `Bearer ${cookies.jwt.token}`,
+          Authorization: `Bearer ${cookies?.jwt?.token}`,
         },
       })
       .then((res) => {
@@ -56,7 +56,7 @@ function ChatOnline({ onlineUsers, curentId, setcurrentChat }) {
         `${port.herokuPort}/conversation/find/${curentId}/${user._id}`,
         {
           headers: {
-            Authorization: `Bearer ${cookies.jwt.token}`,
+            Authorization: `Bearer ${cookies?.jwt?.token}`,
           },
         }
       );
@@ -74,7 +74,7 @@ function ChatOnline({ onlineUsers, curentId, setcurrentChat }) {
             userDetails,
             {
               headers: {
-                Authorization: `Bearer ${cookies.jwt.token}`,
+                Authorization: `Bearer ${cookies?.jwt?.token}`,
               },
             }
           );

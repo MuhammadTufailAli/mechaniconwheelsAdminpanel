@@ -153,7 +153,7 @@ function Dashboard() {
 
         {
           headers: {
-            Authorization: `Bearer ${cookies.jwt.token}`,
+            Authorization: `Bearer ${cookies?.jwt?.token}`,
           },
         }
       )
@@ -174,7 +174,7 @@ function Dashboard() {
 
         {
           headers: {
-            Authorization: `Bearer ${cookies.jwt.token}`,
+            Authorization: `Bearer ${cookies?.jwt?.token}`,
           },
         }
       )
@@ -197,7 +197,7 @@ function Dashboard() {
 
         {
           headers: {
-            Authorization: `Bearer ${cookies.jwt.token}`,
+            Authorization: `Bearer ${cookies?.jwt?.token}`,
           },
         }
       )
@@ -218,7 +218,7 @@ function Dashboard() {
 
         {
           headers: {
-            Authorization: `Bearer ${cookies.jwt.token}`,
+            Authorization: `Bearer ${cookies?.jwt?.token}`,
           },
         }
       )
@@ -285,8 +285,7 @@ function Dashboard() {
           style={{
             display: "flex",
             backgroundColor: "rgba(235, 238, 242, 255)",
-          }}
-        >
+          }}>
           <div className="rightSideContainer">
             <div className="UpperPart">
               <div>
@@ -312,8 +311,7 @@ function Dashboard() {
               <div class="row">
                 <div
                   style={{ padding: "0px" }}
-                  class="col-xl-4 col-md-6 col-sm-12"
-                >
+                  class="col-xl-4 col-md-6 col-sm-12">
                   <div className="boxForInfo">
                     <div className="boxForInfoUpperContainer">
                       <div>
@@ -345,8 +343,7 @@ function Dashboard() {
                 </div>
                 <div
                   style={{ padding: "0px" }}
-                  class="col-xl-4 col-md-6 col-sm-12"
-                >
+                  class="col-xl-4 col-md-6 col-sm-12">
                   <div className="boxForInfo">
                     <div className="boxForInfoUpperContainer">
                       <div>
@@ -371,8 +368,7 @@ function Dashboard() {
                       <p className="boxLowerTextIcon">
                         <Link
                           to="/AllProducts"
-                          className="boxLowerTextIconLink"
-                        >
+                          className="boxLowerTextIconLink">
                           <AiFillCaretRight className="icon" />
                         </Link>
                       </p>
@@ -381,8 +377,7 @@ function Dashboard() {
                 </div>
                 <div
                   style={{ padding: "0px" }}
-                  class="col-xl-4 col-md-6 col-sm-12"
-                >
+                  class="col-xl-4 col-md-6 col-sm-12">
                   <div className="boxForInfo">
                     <div className="boxForInfoUpperContainer">
                       <div>

@@ -136,8 +136,7 @@ function AllUsers() {
                 to="/AllUsers/SelectedUserDetails"
                 state={{ user: record.user }}
                 className="boxLowerTextLink"
-                style={{ color: "white", textDecoration: "none" }}
-              >
+                style={{ color: "white", textDecoration: "none" }}>
                 View
               </Link>
             </Button>
@@ -152,8 +151,7 @@ function AllUsers() {
                 setUserId(record.user._id);
 
                 setIsOpen(true);
-              }}
-            >
+              }}>
               Warning
             </Button>
             <Button
@@ -167,7 +165,7 @@ function AllUsers() {
                       `${port.herokuPort}/users/deleteUser/${record.user._id}`,
                       {
                         headers: {
-                          Authorization: `Bearer ${cookies.jwt.token}`,
+                          Authorization: `Bearer ${cookies?.jwt?.token}`,
                         },
                       }
                     )
@@ -180,8 +178,7 @@ function AllUsers() {
                       console.log(err.response.data.message);
                     });
                 }
-              }}
-            >
+              }}>
               Delete
             </Button>
             <div style={{ display: "flex", flexDirection: "column" }}>
@@ -203,8 +200,7 @@ function AllUsers() {
                           } else {
                             updatestatus(email.user._id, "inactive");
                           }
-                        }}
-                      >
+                        }}>
                         Deactivate
                       </li>
 
@@ -215,8 +211,7 @@ function AllUsers() {
                           } else {
                             updatestatus(email.user._id, "active");
                           }
-                        }}
-                      >
+                        }}>
                         Activate
                       </li>
                     </ul>
@@ -234,7 +229,7 @@ function AllUsers() {
     axios
       .get(`${port.herokuPort}/users/allUsers`, {
         headers: {
-          Authorization: `Bearer ${cookies.jwt.token}`,
+          Authorization: `Bearer ${cookies?.jwt?.token}`,
         },
       })
       .then((res) => {
@@ -272,16 +267,16 @@ function AllUsers() {
         {
           refOfUser: userId,
           adminName:
-            cookies.jwt.data.user.firstname +
+            cookies?.jwt?.data?.user?.firstname +
             " " +
-            cookies.jwt.data.user.lastname,
+            cookies?.jwt?.data?.user?.lastname,
 
           warning: warning,
-          adminPhotoUrl: cookies.jwt.data.user.photoUrl,
+          adminPhotoUrl: cookies?.jwt?.data?.user?.photoUrl,
         },
         {
           headers: {
-            Authorization: `Bearer ${cookies.jwt.token}`,
+            Authorization: `Bearer ${cookies?.jwt?.token}`,
           },
         }
       )
@@ -355,8 +350,7 @@ function AllUsers() {
             style={{
               display: "flex",
               backgroundColor: "rgba(235, 238, 242, 255)",
-            }}
-          >
+            }}>
             <div style={{ width: "80%", marginLeft: "10%" }}>
               <div>
                 <p className="UnderHeaderTextAllUsers">Total Users</p>
@@ -367,8 +361,7 @@ function AllUsers() {
 
                   justifyContent: "flex-end",
                   marginBottom: 10,
-                }}
-              >
+                }}>
                 <div style={{ width: 200 }}>
                   <TextField
                     id="outlined-basic"
@@ -391,8 +384,11 @@ function AllUsers() {
                     />
                     modalIsOpen{" "}
                     <p
-                      style={{ fontSize: 26, fontWeight: 600, marginTop: -100 }}
-                    >
+                      style={{
+                        fontSize: 26,
+                        fontWeight: 600,
+                        marginTop: -100,
+                      }}>
                       No User Found with this Name :(
                     </p>
                   </div>
@@ -436,8 +432,7 @@ function AllUsers() {
                     }}
                     onClick={() => {
                       sendWarning();
-                    }}
-                  >
+                    }}>
                     Send
                   </Button>
                 </div>

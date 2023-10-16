@@ -82,7 +82,7 @@ function SelectedProductDetails() {
   //   axios
   //     .get(`${port.herokuPort}/booking/checkout-session/${product._id}`, {
   //       headers: {
-  //         Authorization: `Bearer ${cookies.jwt.token}`,
+  //         Authorization: `Bearer ${cookies?.jwt?.token}`,
   //       },
   //     })
   //     .then((res) => {
@@ -125,8 +125,7 @@ function SelectedProductDetails() {
               loop
               showDots
               autoplay={4000}
-              dotColorActive="#8b008b"
-            >
+              dotColorActive="#8b008b">
               {product.imageUrl.map((image) => {
                 return (
                   <Carousel.Item>
@@ -150,8 +149,7 @@ function SelectedProductDetails() {
                 marginBottom: 0,
                 marginTop: 10,
                 marginLeft: 5,
-              }}
-            >
+              }}>
               <p style={{ color: "black", fontWeight: "600" }}>
                 {product.title}
               </p>
@@ -165,8 +163,7 @@ function SelectedProductDetails() {
                 marginLeft: 5,
                 color: "grey",
                 marginBottom: 0,
-              }}
-            >
+              }}>
               {product.description}
             </p>
             <p
@@ -177,8 +174,7 @@ function SelectedProductDetails() {
                 marginBottom: 0,
 
                 marginLeft: 5,
-              }}
-            >
+              }}>
               <p style={{ color: "black" }}>
                 <span style={{ color: "purple", fontWeight: "600" }}>
                   Location{" "}
@@ -201,8 +197,7 @@ function SelectedProductDetails() {
                 marginBottom: 0,
                 marginTop: 10,
                 marginLeft: 5,
-              }}
-            >
+              }}>
               <p style={{ color: "black" }}>
                 <span style={{ color: "purple", fontWeight: "600" }}>
                   Condition{" "}
@@ -239,8 +234,7 @@ function SelectedProductDetails() {
                 fontSize: 22,
                 marginTop: 20,
                 marginLeft: 20,
-              }}
-            >
+              }}>
               Product Reviews
             </p>
             <div className="TotalReviewParent">
@@ -277,8 +271,7 @@ function SelectedProductDetails() {
                           </div>
                         </div>
                         <div
-                          style={{ display: "flex", flexFlow: "column wrap" }}
-                        >
+                          style={{ display: "flex", flexFlow: "column wrap" }}>
                           <p>{review?.review}</p>
                         </div>
                       </div>
